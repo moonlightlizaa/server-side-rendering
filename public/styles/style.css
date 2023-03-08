@@ -1,0 +1,89 @@
+:root {
+  --vtDarkBlue: #090940;
+  --vtButton: #de563b;
+  --mainBackground: #ffffff;
+
+  --vtPrimaryFont: "rigid-square", sans-serif;
+  --vtSecondaryFont: "yrsa", serif;
+
+  --vtMenuFont: 800 20px "rigid-square", sans-serif;
+}
+
+body {
+  background: #de563b;
+}
+/* NAVBAR  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* START MENU BAR */
+.content {
+  padding: 0 20px;
+  margin: 30px 0px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+.toggler {
+  color: var(--vtDarkBlue);
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+/* START NAVIGATION */
+nav {
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--vtDarkBlue);
+  font: var(--vtMenuFont);
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: var(--vtButton);
+}
+
+@media screen and (min-width: 35em) {
+  .content {
+    padding: 0 50px;
+  }
+
+  .toggler {
+    display: none;
+  }
+
+  nav {
+    display: block !important; /* prevent the nav to hide when resize */
+    position: relative;
+    width: auto;
+    float: right;
+    padding: 5px 0;
+  }
+
+  nav ul {
+    float: left;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-right: 50px;
+  }
+}
