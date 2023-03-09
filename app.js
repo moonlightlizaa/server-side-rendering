@@ -3,7 +3,7 @@ import express from "express";
 
 // API
 
-const url = "https://api.visualthinking.fdnd.nl/api/v1/methods";
+const url = "https://api.visualthinking.fdnd.nl/api/v1/methods?first=100";
 const data = await fetch(url).then((response) => response.json());
 
 console.log(data);

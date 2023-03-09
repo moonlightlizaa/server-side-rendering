@@ -1,17 +1,17 @@
 :root {
   --vtDarkBlue: #090940;
   --vtButton: #de563b;
+  --vtGrey: #f9f9f9;
+  --vtBorders: #e0dedc;
   --mainBackground: #ffffff;
 
   --vtPrimaryFont: "rigid-square", sans-serif;
   --vtSecondaryFont: "yrsa", serif;
 
   --vtMenuFont: 800 20px "rigid-square", sans-serif;
+  --vtH2Font: 800 20px "rigid-square", sans-serif;
 }
 
-body {
-  background: #de563b;
-}
 /* NAVBAR  */
 
 * {
@@ -21,14 +21,13 @@ body {
 }
 
 /* START MENU BAR */
-.content {
+.header-logo {
   padding: 0 20px;
   margin: 30px 0px;
 }
 
 header {
   width: 100%;
-  position: fixed;
   z-index: 2;
 }
 
@@ -61,6 +60,30 @@ nav ul li a:hover {
   color: var(--vtButton);
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .methods {
+} */
+
+.methods img {
+  width: 300px;
+  border: 1px solid;
+  border-color: var(--vtBorders);
+}
+
+h2 {
+  font: var(--vtH2Font);
+  color: var(--vtDarkBlue);
+  width: 250px;
+}
+
+/*
+                        RESPONSIVE TABLET  
+*/
 @media screen and (min-width: 35em) {
   .content {
     padding: 0 50px;
@@ -85,5 +108,10 @@ nav ul li a:hover {
   nav ul li {
     display: inline-block;
     padding-right: 50px;
+    color: var(--vtDarkBlue);
+    font: var(--vtMenuFont);
   }
+}
+
+@media screen and (min-width: 50em) {
 }
