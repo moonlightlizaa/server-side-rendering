@@ -9,7 +9,23 @@
   --vtSecondaryFont: "yrsa", serif;
 
   --vtMenuFont: 800 20px "rigid-square", sans-serif;
-  --vtH2Font: 800 20px "rigid-square", sans-serif;
+  --vtH1Font: 800 36px "rigid-square", sans-serif;
+  --vtH2Font: 800 24px "rigid-square", sans-serif;
+}
+
+h1 {
+  font: var(--vtH1Font);
+  color: var(--vtDarkBlue);
+}
+
+h2 {
+  font: var(--vtH2Font);
+  color: var(--vtDarkBlue);
+}
+
+p {
+  font-family: var(--vtSecondaryFont);
+  font-size: 18px;
 }
 
 /* NAVBAR  */
@@ -53,17 +69,36 @@ nav ul li a {
   text-decoration: none;
   color: var(--vtDarkBlue);
   font: var(--vtMenuFont);
-  transition: 0.3s ease-out;
-}
-
-nav ul li a:hover {
-  color: var(--vtButton);
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* intro */
+
+.intro {
+  display: grid;
+  grid:
+    ". intro ." 1fr
+    / 1fr 5fr 1fr;
+  gap: 8px;
+
+  background-color: var(--vtGrey);
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  grid-area: intro;
+}
+
+.intro-text h1 {
+  margin-bottom: 20px;
 }
 
 /* .methods {
@@ -75,16 +110,15 @@ main {
   border-color: var(--vtBorders);
 }
 
-h2 {
-  font: var(--vtH2Font);
-  color: var(--vtDarkBlue);
+.methods-titles {
+  word-break: break-word;
   width: 250px;
 }
 
 /*
                         RESPONSIVE TABLET  
 */
-@media screen and (min-width: 35em) {
+@media (min-width: 31em) {
   .content {
     padding: 0 50px;
   }
@@ -113,5 +147,16 @@ h2 {
   }
 }
 
-@media screen and (min-width: 50em) {
+@media (min-width: 50em) {
+  main {
+    display: grid;
+    grid:
+      ". content ." 1fr
+      / 1fr 4fr 1fr;
+    gap: 8px;
+  }
+
+  .methods {
+    grid
+  }
 }
