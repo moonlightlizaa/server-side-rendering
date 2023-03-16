@@ -29,6 +29,7 @@ Ik heb vanaf sprint 2 gewerkt aan het maken van deze pagina en mijn doel was toe
 <b>Gebruikte Tools</b>
 <ul>
 <li>Visual Studio Code</li>
+<li>Visual Thinking API</li>
 <li>Node.js</li>
 <li>Express</li>
 <li>CSS</li>
