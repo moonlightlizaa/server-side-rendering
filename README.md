@@ -15,6 +15,9 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 
 ## Beschrijving
 
+![readme](https://user-images.githubusercontent.com/106411511/227812045-65bf2cdd-d4ec-4706-a848-cc0dc18f7685.jpg)
+
+
 Ik heb gewerkt met de User Story:
 <br>
 "Als student wil ik eenvoudig alle werkvormen kunnen verkennen zodat ik er een kan uitkiezen die bij mijn tekendoel past"
