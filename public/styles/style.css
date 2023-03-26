@@ -10,7 +10,7 @@
 
   --vtMenuFont: 800 20px "rigid-square", sans-serif;
   --vtH1Font: 800 36px "rigid-square", sans-serif;
-  --vtH2Font: 800 24px "rigid-square", sans-serif;
+  --vtH2Font: 800 20px "rigid-square", sans-serif;
 }
 
 h1 {
@@ -101,6 +101,62 @@ main {
   margin-bottom: 20px;
 }
 
+/*                      
+                        DROPDOWN MENU 
+*/
+
+li a {
+  text-decoration: none;
+  color: var(--vtDarkBlue);
+}
+
+.categories {
+  width: 300px;
+  background: var(--vtGrey);
+  margin: 10px auto;
+}
+
+span {
+  padding: 30px;
+  background: var(--vtGrey);
+  color: var(--vtDarkBlue);
+  font-size: 1.2em;
+  cursor: pointer;
+  display: block;
+  font-family: var(--vtPrimaryFont);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+span::after {
+  float: right;
+  right: 10%;
+  content: url(/assets/0-logo/1-icons/arrow-down-WATER-vtHBO.svg);
+}
+
+.slide {
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+
+  transition: height 0.4s ease;
+}
+
+.slide li {
+  padding: 30px;
+}
+
+#touch {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+
+#touch:checked + .slide {
+  height: 300px;
+}
+
 /* .methods {
 } */
 
@@ -111,8 +167,7 @@ main {
 }
 
 .methods-titles {
-  word-break: break-word;
-  width: 250px;
+  width: 200px;
 }
 
 /*                          LOAD MORE  
@@ -151,44 +206,6 @@ main {
   font-size: 20px;
   color: var(--mainBackground);
   cursor: pointer;
-}
-
-/*                      
-                        DROPDOWN MENU 
-*/
-
-.category-dropdown {
-  background-color: var(--vtGrey);
-  color: var(--vtDarkBlue);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--vtGrey);
-  width: 100%;
-  overflow: auto;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.show {
-  display: block;
 }
 
 /*
