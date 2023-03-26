@@ -71,4 +71,4 @@ loadMoreButton.addEventListener("click", function () {
   showMethods();
 });
 
-// DROPDOWN MENU
+// DROPDOWN MENU icon
