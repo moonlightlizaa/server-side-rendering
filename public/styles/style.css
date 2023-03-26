@@ -115,6 +115,82 @@ main {
   width: 250px;
 }
 
+/*                          LOAD MORE  
+*/
+
+.method-hidden {
+  display: none;
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.load-more-button {
+  background-color: var(--vtButton);
+  border: none;
+  width: 153px;
+  height: 54px;
+  font-family: var(--vtPrimaryFont);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--mainBackground);
+  cursor: pointer;
+}
+
+.load-less-button {
+  background-color: var(--vtButton);
+  border: none;
+  width: 153px;
+  height: 54px;
+  font-family: var(--vtPrimaryFont);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--mainBackground);
+  cursor: pointer;
+}
+
+/*                      
+                        DROPDOWN MENU 
+*/
+
+.category-dropdown {
+  background-color: var(--vtGrey);
+  color: var(--vtDarkBlue);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--vtGrey);
+  width: 100%;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
 /*
                         RESPONSIVE TABLET  
 */
@@ -147,16 +223,72 @@ main {
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   main {
     display: grid;
     grid:
-      ". content ." 1fr
+      ". methods ." 1fr
       / 1fr 4fr 1fr;
     gap: 8px;
   }
 
   .methods {
-    grid
+    grid-area: methods;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc(50% - 16px), 1fr)
+    ); /* change width to 50% */
+    grid-auto-flow: dense;
+    gap: 25px;
+  }
+
+  .method-container {
+    display: grid;
+    grid-template-rows: 1fr auto; /* define grid rows */
+  }
+
+  .method-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .methods-titles {
+    width: 100%;
+  }
+}
+
+@media (min-width: 65em) {
+  main {
+    display: grid;
+    grid:
+      ". methods ." 1fr
+      / 1fr 4fr 1fr;
+    gap: 8px;
+  }
+
+  .methods {
+    grid-area: methods;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc(30% - 25px), 1fr)
+    ); /* change width to 33.33% */
+    grid-auto-flow: dense; /* fill in empty cells */
+    gap: 25px;
+  }
+
+  .method-container {
+    display: grid;
+    grid-template-rows: 1fr auto; /* define grid rows */
+  }
+
+  .method-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .methods-titles {
+    width: 100%;
   }
 }

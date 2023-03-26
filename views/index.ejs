@@ -14,23 +14,46 @@
 
 </section>
 
+<section class="categories-menu">
+  <section class="dropdown">
+    <button onclick="categoriesMenu()" class="category-dropdown">Dropdown</button>
+    <section id="myDropdown" class="dropdown-content">
+      <a href="#Onderzoeken-en-begrijpen">Onderzoeken en begrijpen</a>
+      <a href="#Organiseren-en-plannen">Organiseren en plannen</a>
+      <a href="#Leren-over-jezelf">Leren over jezelf en reflecteren</a>
+      <a href="#Creatief-denken">Creatief denken</a>
+      <a href="#Leren-over-anderen">Leren over anderen</a>
+      <a href="#Communiceren-en-presenteren">Communiceren en presenteren</a>
+    </section>
+  </section>
+</section>
+
+
+
 <main>
   <article class="methods">
     <% if (methods && methods.length > 0) { %>
-    <% methods.forEach((method) => { %>
-    <% if (method.template && method.template.url) { %>
-    <img src="<%= method.template.url %>" alt="Voorbeeld van <%= method.title%>">
-    <% } else { %>
-    <img src="/assets/placeholder.jpg" alt="Placeholder Image">
-    <% } %>
-    <section class="methods-titles">
-      <h2><%= method.title %></h2>
+    <% methods.forEach((method, index) => { %>
+    <section class="method-container" data-index="<%= index %>">
+      <% if (method.template && method.template.url) { %>
+      <img src="<%= method.template.url %>" alt="Voorbeeld van <%= method.title%>">
+      <% } else { %>
+      <img src="/assets/placeholder.jpg" alt="Placeholder Image">
+      <% } %>
+      <section class="methods-titles">
+        <h2><%= method.title %></h2>
+      </section>
     </section>
     <% }); %>
     <% } %>
-
   </article>
 </main>
+
+<section>
+  <div class="load-more">
+    <button class="load-more-button">Laad Meer</button>
+  </div>
+</section>
 </body>
 
 </html>
