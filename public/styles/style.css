@@ -355,7 +355,7 @@ footer h3 {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 68em) {
   .intro {
     display: grid;
     grid:
