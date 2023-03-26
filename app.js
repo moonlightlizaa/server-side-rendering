@@ -24,6 +24,23 @@ app.get("/", function (req, res) {
   res.render("index", data);
 });
 
+// routes
+
+app.get("/", (request, response) => {
+  // console.log(request.query.squad);  --> deze heb ik niet meer nodig
+
+  let slug = request.query.category || "categories";
+  let orderOnderzoeken =
+    request.query.onderzoeken || "onderzoeken-en-begrijpen";
+  let onderzoekenUrl = url + slug + "orderOnderzoeken";
+
+  fetchJson(onderzoekenUrl).then((data) => {
+    response.render("index", data);
+  });
+
+  console.log(onderzoekenUrl);
+});
+
 // Stel het poortnummer in waar express op gaat luisteren
 app.set("port", process.env.PORT || 6500);
 
