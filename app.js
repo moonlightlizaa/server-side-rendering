@@ -6,7 +6,7 @@ import express from "express";
 const url = "https://api.visualthinking.fdnd.nl/api/v1/methods?first=100";
 const data = await fetch(url).then((response) => response.json());
 
-console.log(data);
+// console.log(data);
 
 // Maak een nieuwe express app aan
 const app = express();
