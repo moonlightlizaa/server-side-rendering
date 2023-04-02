@@ -43,6 +43,11 @@ Ik heb vanaf sprint 2 gewerkt aan het maken van deze pagina en mijn doel was toe
 <li>Adobe Photoshop</li>
 </ul>
 
+## Bronnen
+
+<a href="https://github.com/fdnd-agency/visual-thinking">Visual Thinking</a>
+[docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
