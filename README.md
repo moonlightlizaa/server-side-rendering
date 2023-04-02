@@ -46,6 +46,7 @@ Ik heb vanaf sprint 2 gewerkt aan het maken van deze pagina en mijn doel was toe
 ## Bronnen
 
 <a href="https://github.com/fdnd-agency/visual-thinking">Visual Thinking</a>
+<br>
 [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 ## Licentie
