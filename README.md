@@ -43,6 +43,10 @@ Ik heb vanaf sprint 2 gewerkt aan het maken van deze pagina en mijn doel was toe
 <li>Adobe Photoshop</li>
 </ul>
 
+## Wiki
+
+In mijn wiki kan je mijn volledige process en ook uitleg voor code vinden! 
+
 ## Bronnen
 
 <a href="https://github.com/fdnd-agency/visual-thinking">Visual Thinking</a>
